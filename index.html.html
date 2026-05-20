@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="images/logo.ico" type="image/x-icon">
+<title>Darpan Adhikari — Full Stack Developer</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style_drp.min.css">
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-logo">DARPAN.DEV</div>
+  <div class="loader-track"><div class="loader-fill" id="lf"></div></div>
+  <div class="loader-num" id="ln">0%</div>
+</div>
+
+<!-- CURSOR -->
+<div id="cur"></div><div id="cur-r"></div>
+
+<!-- 3D BACKGROUND -->
+<canvas id="bg-canvas"></canvas>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="logo">DARPAN.DEV</div>
+  <ul class="nav-ul">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="hire-btn"><span>Hire Me →</span></a>
+</nav>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section id="hero">
+  <div class="hero-wrap">
+    <div class="hero-left">
+      <div class="hero-eyebrow">Available for Work</div>
+      <h1 class="hero-h1">
+        <span class="line1">Full Stack</span>
+        <span class="line2" id="typed-line">Developer</span>
+      </h1>
+      <p class="hero-sub">
+        I build <em>fast, scalable, beautiful</em> web products — from
+        pixel-perfect UIs to rock-solid backend systems.
+        5+ years turning ideas into <em>deployed reality</em>.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-filled">See My Work →</a>
+        <a href="#contact" class="btn-ghost">Let's Talk</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="avatar-scene">
+        <div class="avatar-ring-outer"></div>
+        <div class="avatar-ring-mid"></div>
+        <div class="avatar-card">
+          <!-- Replace src with your photo URL -->
+          <div class="avatar-placeholder">
+            <img src="images/front-img.jpeg" alt="" srcset="">
+          </div>
+        </div>
+        <div class="avatar-badge">
+          <div class="badge-dot"></div>
+          Open to opportunities
+        </div>
+        <div class="avatar-stat">
+          <div class="stat-val">50+</div>
+          <div class="stat-label">Projects</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-chevrons">
+      <i></i><i></i><i></i>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ ABOUT ══════════════ -->
+<section id="about">
+  <div class="section-wrap">
+    <div class="about-grid">
+      <div class="about-img-wrap rv">
+        <!-- Replace with your image: <img src="your-photo.jpg" alt="Your Name" style="width:100%;height:100%;object-fit:cover"> -->
+        <div class="about-img-placeholder">
+          <img src="images/coat-img.jpg" alt="">
+        </div>
+        <div class="about-img-overlay"></div>
+        <div class="about-chips">
+          <span class="chip">React</span><span class="chip">Node.js</span>
+          <span class="chip">AWS</span><span class="chip">TypeScript</span>
+          <span class="chip">PostgreSQL</span><span class="chip">Docker</span>
+        </div>
+      </div>
+      <div class="about-text rv">
+  <div class="s-label">// about me</div>
+
+  <h2 class="s-h2">
+    Building intelligent digital systems,<br>one commit at a time
+  </h2>
+
+  <div class="s-rule"></div>
+
+  <p>
+    Hey, I'm <strong>Darpan Adhikari</strong> — a developer working across
+    <strong>web, mobile, desktop, and AI-driven applications</strong>.
+  </p>
+
+  <p>
+    I build scalable products using modern stacks and also work on
+    <strong>device integration and connected systems</strong>, focusing on real-world, practical solutions.
+  </p>
+
+  <p>
+    I enjoy learning new technologies, exploring innovative ideas, and turning them into useful and meaningful products with clean and efficient architecture.
+  </p>
+
+  <div class="kpi-row">
+    <div class="kpi">
+      <div class="kpi-n" data-count="50">0+</div>
+      <div class="kpi-l">Projects shipped</div>
+    </div>
+
+    <div class="kpi">
+      <div class="kpi-n" data-count="5">0</div>
+      <div class="kpi-l">Years building</div>
+    </div>
+
+    <div class="kpi">
+      <div class="kpi-n" data-count="30">0</div>
+      <div class="kpi-l">Happy clients</div>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ SKILLS ══════════════ -->
+<section id="skills">
+  <div class="section-wrap">
+    <div class="rv">
+      <div class="s-label">// tech stack</div>
+      <h2 class="s-h2">Tools &amp; Technologies</h2>
+      <div class="s-rule"></div>
+    </div>
+    <div class="skills-tabs rv">
+      <button class="tab-btn active" data-tab="frontend">Frontend</button>
+      <button class="tab-btn" data-tab="backend">Backend</button>
+      <button class="tab-btn" data-tab="cloud">Cloud &amp; DevOps</button>
+      <button class="tab-btn" data-tab="tools">Tools</button>
+    </div>
+    <div id="tab-frontend" class="skills-panel active">
+      <div class="tech-grid" id="tg-frontend"></div>
+    </div>
+    <div id="tab-backend" class="skills-panel">
+      <div class="tech-grid" id="tg-backend"></div>
+    </div>
+    <div id="tab-cloud" class="skills-panel">
+      <div class="tech-grid" id="tg-cloud"></div>
+    </div>
+    <div id="tab-tools" class="skills-panel">
+      <div class="tech-grid" id="tg-tools"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ EXPERIENCE ══════════════ -->
+<section id="experience">
+  <div class="section-wrap">
+    <div class="rv">
+      <div class="s-label">// work history</div>
+      <h2 class="s-h2">Experience</h2>
+      <div class="s-rule"></div>
+    </div>
+    <div class="exp-grid">
+      <div class="exp-nav rv" id="exp-nav">
+        <div class="exp-nav-item active" data-exp="0">
+          <span class="exp-company">Axis Investment and Development Ltd. Pvt.</span>
+          <span class="exp-period">2025 – Present</span>
+        </div>
+        <div class="exp-nav-item" data-exp="1">
+          <span class="exp-company">Transperfect</span>
+          <span class="exp-period">2022 – 2022</span>
+        </div>
+      </div>
+      <div class="rv" id="exp-details"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PROJECTS ══════════════ -->
+<section id="projects">
+  <div class="section-wrap">
+    <div class="rv">
+      <div class="s-label">// selected work</div>
+      <h2 class="s-h2">Featured Projects</h2>
+      <div class="s-rule"></div>
+    </div>
+    <div class="proj-filter rv">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+      <button class="filter-btn" data-filter="frontend">Frontend</button>
+      <button class="filter-btn" data-filter="backend">Backend</button>
+      <button class="filter-btn" data-filter="package">Package</button>
+      <button class="filter-btn" data-filter="ai">AI/ML</button>
+      <button class="filter-btn" data-filter="mobile">Mobile App</button>
+      <button class="filter-btn" data-filter="desktop">Desktop App</button>
+    </div>
+    <div class="proj-grid" id="proj-grid"></div>
+  </div>
+</section>
+
+<!-- ══════════════ CONTACT ══════════════ -->
+<section id="contact">
+  <div class="section-wrap">
+    <div class="contact-grid">
+      <div class="rv">
+        <div class="s-label">// let's connect</div>
+        <h2 class="s-h2">Got a project<br>in mind?</h2>
+        <div class="s-rule"></div>
+        <p style="color:var(--muted);line-height:1.85;font-size:.97rem;margin-bottom:1.5rem">Whether you need a <strong style="color:var(--white);font-weight:500">full-featured web app</strong>, a quick MVP, or someone to take your existing product to the next level — let's talk.</p>
+        <p style="color:var(--muted);line-height:1.85;font-size:.97rem">Currently available for freelance projects and part-time remote roles. Response within 24 hours, guaranteed.</p>
+        <div class="contact-social">
+          <a href="mailto:darpand263@gmail.com" class="s-link">
+            <span class="s-link-icon">📧</span>
+            <div class="s-link-text"><div class="s-link-label">EMAIL</div><div class="s-link-val">Darpand263@gmail.com</div></div>
+          </a>
+          <a href="https://www.linkedin.com/in/darpan-adhikari-81b866280/" class="s-link">
+            <span class="s-link-icon">💼</span>
+            <div class="s-link-text"><div class="s-link-label">LINKEDIN</div><div class="s-link-val">linkedin.com/in/darpan-adhikari-81b866280/</div></div>
+          </a>
+          <a href="https://github.com/DarpanAdhikari" class="s-link">
+            <span class="s-link-icon">🐙</span>
+            <div class="s-link-text"><div class="s-link-label">GITHUB</div><div class="s-link-val">github.com/DarpanAdhikari</div></div>
+          </a>
+        </div>
+      </div>
+      <div class="contact-form-wrap rv">
+        <div class="form-row">
+          <div class="fgroup"><label class="flabel">Name</label><input class="finput" type="text" placeholder="Your name"></div>
+          <div class="fgroup"><label class="flabel">Email</label><input class="finput" type="email" placeholder="your@email.com" readonly></div>
+        </div>
+        <div class="fgroup full"><label class="flabel">Subject</label><input class="finput" type="text" placeholder="Project type / Role" readonly></div>
+        <div class="fgroup full"><label class="flabel">Message</label><textarea class="ftextarea" placeholder="Tell me about your project, timeline, and budget..." readonly></textarea></div>
+        <button class="submit-btn" id="send-btn" onclick="sendMsg(this)">Send Message ✦</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Designed &amp; Built by <span style="color:var(--cyan)">Darpan Adhikari</span> <span class="heart">♥</span> Full Stack Developer · <span id="currentYear"></span></p>
+</footer>
+
+<script src="assets/data.js"></script>
+<script src="assets/script.js"></script>
+</body>
+</html>
